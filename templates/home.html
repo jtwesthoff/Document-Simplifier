@@ -1,0 +1,49 @@
+{%extends "layout.html"%}
+{%block content%}
+    <style>
+        h1{
+            font-family: 'Courier', Courier, monospace;
+            font-size:30px;
+        }
+        .formBlock{
+            position: absolute;
+            top:50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            padding:10px;
+        }
+        img{
+            border-radius: 8px;
+            max-width: 70%;
+        }
+        body{
+            background-color: #b8babb;
+        }
+    </style>
+    <div class="formBlock">
+        <img src="static/images/Logo.png" alt="Logo">
+        <h1><span class="auto-type"></span></h1>
+        <!-- {%for post in posts%}
+            <h3>File Name: {{post.FileName}}</h3>
+            <p1>File Type: {{post.FileType}}</p1>
+        {%endfor%} -->
+        <form method="POST" enctype="multipart/form-data">
+            {{form.hidden_tag()}}
+            {{form.file()}}
+            {{form.submit()}}
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["DocScan Legal AI PDF Reader", "AI to understand Legal Documents", "DocScan Legal AI PDF Reader"],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: false
+            })
+        </script>
+    </div>
+{%endblock content%}

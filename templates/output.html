@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+        /* Page background color */
+        body {
+            background-color: #f0f0f0; /* Change this color to your desired page background color */
+        }
+
+        /* Text styles */
+        .container {
+            background-color: #ffffff; /* White background for the container */
+            padding: 20px; /* Adjust padding as needed */
+        }
+
+        .simplified-text p {
+            font-size: 18px; /* Increase the font size */
+        }
+    </style>
+    <div class="container">
+        <h1>Simplified Text</h1>
+        <div class="simplified-text">
+            <p>{{ simplified_text }}</p>
+        </div>
+    </div>
+{% endblock %}
